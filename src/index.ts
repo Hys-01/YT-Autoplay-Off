@@ -1,1 +1,1 @@
-import fs from 'fs';
+console.log('does this print?')
