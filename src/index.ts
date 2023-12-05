@@ -30,8 +30,12 @@ function stopAutoplay() {
 
 }
 
+function run() { 
+    if (isInPlaylist()) { 
+        stopAutoplay(); 
+    }
+}
 
-
-console.log("MY SCRIPT!", isInPlaylist());
+console.log("MY SCRIPT!", run());
 
 
