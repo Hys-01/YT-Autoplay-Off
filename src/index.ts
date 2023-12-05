@@ -10,16 +10,14 @@ function stopAutoplay() {
     /* 
     stops loading the next video in the playlist
     */
-
-    (function() {
-        function noAutoAdvance() {
-            const ypm = document.querySelector('yt-playlist-manager');
-            if (ypm) {
-                ypm.canAutoAdvance_ = false;
-            }
+    function noAutoAdvance() {
+        const manager: any = document.querySelector('yt-playlist-manager');
+        if (manager) {
+            manager.canAutoAdvance_ = false;
         }
-        noAutoAdvance();
-    })();
+    }
+    noAutoAdvance();
+
 
 }
 
