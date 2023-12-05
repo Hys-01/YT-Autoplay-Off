@@ -17,7 +17,7 @@ function stopAutoplay() {
             manager.canAutoAdvance_ = false;
         }
     }
-    noAutoAdvance();
+    setInterval(noAutoAdvance, 500);
 }
 function run() {
     if (isInPlaylist()) {

@@ -16,8 +16,9 @@ function stopAutoplay() {
             console.log('off!')
             manager.canAutoAdvance_ = false;
         }
+
     }
-    noAutoAdvance();
+    setInterval(noAutoAdvance, 500);
 
 
 }
