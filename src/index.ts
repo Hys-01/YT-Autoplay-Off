@@ -16,7 +16,16 @@ function stopAutoplay() {
     // the actual script
     script.innerText = 
         ` 
-    
+        (function() {
+            function noAutoAdvance() {
+                const ypm = document.querySelector('yt-playlist-manager');
+                if (ypm) {
+                    ypm.canAutoAdvance_ = false;
+                }
+            }
+            noAutoAdvance();
+            setInterval(noAutoAdvance, 500); // Set a default frequency
+        })();
         `;
 
 }
