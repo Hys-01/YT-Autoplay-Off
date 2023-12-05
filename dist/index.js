@@ -10,22 +10,15 @@ function stopAutoplay() {
     /*
     stops loading the next video in the playlist
     */
-    let script = document.createElement("script");
-    script.type = "text/javascript"; // compiled into js
-    // the actual script
-    script.innerText =
-        ` 
-        (function() {
-            function noAutoAdvance() {
-                const ypm = document.querySelector('yt-playlist-manager');
-                if (ypm) {
-                    ypm.canAutoAdvance_ = false;
-                }
+    (function () {
+        function noAutoAdvance() {
+            const ypm = document.querySelector('yt-playlist-manager');
+            if (ypm) {
+                ypm.canAutoAdvance_ = false;
             }
-            noAutoAdvance();
-            setInterval(noAutoAdvance, 500); // Set a default frequency
-        })();
-        `;
+        }
+        noAutoAdvance();
+    })();
 }
 function run() {
     if (isInPlaylist()) {
