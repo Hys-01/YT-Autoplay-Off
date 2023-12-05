@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Playlist Detector",
+    "version": "1.0",
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["dist/index.js"]
+      }
+    ],
+    "permissions": ["activeTab"]
+  }
