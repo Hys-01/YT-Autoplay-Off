@@ -13,8 +13,8 @@ function stopAutoplay() {
     function noAutoAdvance() {
         const manager = document.querySelector('yt-playlist-manager');
         if (manager) {
-            console.log('off!');
             manager.canAutoAdvance_ = false;
+            console.log('check status', manager.canAutoAdvance_);
         }
     }
     setInterval(noAutoAdvance, 500);
