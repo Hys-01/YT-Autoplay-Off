@@ -1,5 +1,5 @@
 function isInPlaylist(): boolean { 
-    return window.location.href.includes("link="); 
+    return window.location.href.includes("list="); 
 }
 
-console.log(isInPlaylist());
+console.log("MY SCRIPT!", isInPlaylist());
