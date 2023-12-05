@@ -5,6 +5,10 @@
         "sourceMap": true, 
         "outDir": "dist", 
 
+        //custom
+        "rootDir": "src",
+        "strict": true
+
     }, 
     "include": ["src/**/*"],
 
