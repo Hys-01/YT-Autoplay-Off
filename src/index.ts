@@ -13,7 +13,7 @@ function Turn_Autoplay_Off() {
     if (isInPlaylist()) {
         
         // make a script, and append anonymous function to document, to asyncronously set AutoAdvance property to false, and to repeat at 0.5s intervals
-        let script = document.createElement("script"); 
+        let script: any = document.createElement("script"); 
         script.appendChild(document.createTextNode('(' + function() { 
             // use anonymouse function to convert this block to IIFE, otherwise it keeps failing
             // REMEMBER FOR FUTURE: IIFES CREATE *PRIVATE* SCOPE THAT PROTECTS THIS SCRIPT FROM INTERFERENCE FROM WEBPAGE
