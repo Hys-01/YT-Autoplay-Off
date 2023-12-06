@@ -6,7 +6,7 @@ function isInPlaylist() {
     */
     return window.location.href.includes("list=");
 }
-function run() {
+function Autoplay_Off() {
     if (isInPlaylist()) {
         let script = document.createElement("script");
         script.appendChild(document.createTextNode('(' + function () {
@@ -21,5 +21,5 @@ function run() {
         document.body.appendChild(script);
     }
 }
-console.log("MY SCRIPT!", run());
+console.log("MY SCRIPT!", Autoplay_Off());
 //# sourceMappingURL=index.js.map

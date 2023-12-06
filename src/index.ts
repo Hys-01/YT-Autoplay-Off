@@ -7,7 +7,7 @@ function isInPlaylist(): boolean {
 }
 
 
-function run() { 
+function Autoplay_Off() { 
     if (isInPlaylist()) { 
         let script = document.createElement("script"); 
         script.appendChild(document.createTextNode('(' + function() { 
@@ -22,6 +22,6 @@ function run() {
         document.body.appendChild(script);
     }   
 }
-console.log("MY SCRIPT!", run());
+console.log("MY SCRIPT!", Autoplay_Off());
 
 
