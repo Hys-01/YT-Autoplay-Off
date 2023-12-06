@@ -1,3 +1,4 @@
+
 "use strict";
 function isInPlaylist() {
     /*
@@ -21,10 +22,9 @@ function stopAutoplay() {
 }
 function run() {
     if (isInPlaylist()) {
-        let script = document.createElement("script");
-        script.appendChild(document.createTextNode('(' + stopAutoplay + ')()'));
-        document.body.appendChild(script);
+        let script = document.createElement("script"); 
+                script.appendChild(document.createTextNode('(' + stopAutoplay.toString() + ')()'));
+                document.body.appendChild(script);
     }
 }
 console.log("MY SCRIPT!", run());
-//# sourceMappingURL=index.js.map

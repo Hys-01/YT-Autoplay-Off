@@ -12,21 +12,18 @@ function stopAutoplay() {
     */
     function noAutoAdvance() {
         const manager: any = document.querySelector('yt-playlist-manager');
-        if (manager) {
+        if (manager) { 
             manager.canAutoAdvance_ = false;
+        
             console.log('check status', manager.canAutoAdvance_ )
         }
-
-    }
     setInterval(noAutoAdvance, 500);
-
-
+    }
 }
-
 function run() { 
     if (isInPlaylist()) { 
         let script = document.createElement("script"); 
-        script.appendChild(document.createTextNode('(' + stopAutoplay + ')()'));
+        script.appendChild(document.createTextNode('(' + stopAutoplay.toString() + ')()'));
         document.body.appendChild(script);
     }
 }
