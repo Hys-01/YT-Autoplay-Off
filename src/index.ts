@@ -6,28 +6,22 @@ function isInPlaylist(): boolean {
     return window.location.href.includes("list="); 
 }
 
-function stopAutoplay() { 
-    /* 
-    stops loading the next video in the playlist
-    */
-    function noAutoAdvance() {
-        const manager: any = document.querySelector('yt-playlist-manager');
-        if (manager) { 
-            manager.canAutoAdvance_ = false;
-        
-            console.log('check status', manager.canAutoAdvance_ )
-        }
-    setInterval(noAutoAdvance, 500);
-    }
-}
+
 function run() { 
     if (isInPlaylist()) { 
         let script = document.createElement("script"); 
-        script.appendChild(document.createTextNode('(' + stopAutoplay.toString() + ')()'));
+        script.appendChild(document.createTextNode('(' + function() { 
+            function noAutoAdvance() {
+                const manager: any = document.querySelector('yt-playlist-manager');
+                if (manager) { 
+                    manager.canAutoAdvance_ = false;
+                }
+            }
+            setInterval(noAutoAdvance, 500);
+        }.toString() + ')()'));
         document.body.appendChild(script);
-    }
+    }   
 }
-
 console.log("MY SCRIPT!", run());
 
 
