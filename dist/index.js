@@ -12,14 +12,19 @@ function Turn_Autoplay_Off() {
         // make a script, and append anonymous function to document, to asyncronously set AutoAdvance property to false, and to repeat at 0.5s intervals
         let script = document.createElement("script");
         script.appendChild(document.createTextNode('(' + function () {
+            // use anonymouse function to convert this block to IIFE, otherwise it keeps failing
+            // REMEMBER FOR FUTURE: IIFES CREATE *PRIVATE* SCOPE THAT PROTECTS THIS SCRIPT FROM INTERFERENCE FROM WEBPAGE
             function AutoAdvance_Off() {
+                // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
                 const manager = document.querySelector('yt-playlist-manager');
                 if (manager) {
                     manager.canAutoAdvance_ = false;
                 }
             }
+            // repeat every 500 millisecond
             setInterval(AutoAdvance_Off, 500);
-        }.toString() + ')()'));
+        }.toString() + ')()')); // converting this all to string to serve as script
+        // append custom script to bottom of page. 
         document.body.appendChild(script);
     }
 }
