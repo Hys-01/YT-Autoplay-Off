@@ -21,7 +21,9 @@ function stopAutoplay() {
 }
 function run() {
     if (isInPlaylist()) {
-        stopAutoplay();
+        let script = document.createElement("script");
+        script.appendChild(document.createTextNode('(' + stopAutoplay + ')()'));
+        document.body.appendChild(script);
     }
 }
 console.log("MY SCRIPT!", run());
