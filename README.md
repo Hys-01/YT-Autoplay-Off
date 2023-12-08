@@ -5,6 +5,14 @@ author: Hys-01 (Brian H)
 manifest version: v3 
 tsconfig.target = ES2020
 
+TESTED IN: 
+    CHROME
+    BRAVE
+    
+WORKS IN: 
+    CHROME
+    BRAVE
+
 
 credits: 
 canAutoAdvance_ element of youtube

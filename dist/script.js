@@ -21,8 +21,8 @@ function turn_Autoplay_Off() {
                     manager.canAutoAdvance_ = false;
                 }
             }
-            // repeat every 500 millisecond
-            setInterval(autoAdvance_Off, 500);
+            // repeat every 1/5 sec
+            setInterval(autoAdvance_Off, 200);
         }.toString() + ')()')); // converting this all to string to serve as script
         // append custom script to bottom of page. 
         document.body.appendChild(script);
