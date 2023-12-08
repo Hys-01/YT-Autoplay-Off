@@ -10,4 +10,11 @@
     ],
     "permissions": ["activeTab", "*://www.youtube.com/*", "scripting"],
     "host_permissions": ["*://www.youtube.com/*"]
+    ,
+    "web_accessible_resources": [
+        {
+            "resources": ["dist/inject.js", "dist/script.js"],
+            "matches": ["*://www.youtube.com/*"]
+        }
+    ]
   }

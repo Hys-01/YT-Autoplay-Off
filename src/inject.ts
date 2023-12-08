@@ -3,6 +3,8 @@
 
 function injectScript(source_script: any) {
     // externally inject to avoid content policy YT on manifest v3
+
+    console.log('INJECTSCRIPT RUNNING')
     const script = document.createElement('script') 
     script.src = source_script
 
@@ -12,5 +14,5 @@ function injectScript(source_script: any) {
     (document.head || document.documentElement).appendChild(script);    
 }
 
-let source_script = chrome.runtime.getURL('/script.js')
+let source_script = chrome.runtime.getURL('/dist/script.js')
 injectScript(source_script);
