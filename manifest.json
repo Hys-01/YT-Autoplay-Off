@@ -1,12 +1,13 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "YouTube Playlist Autoplay Fixer",
-    "version": "1.0",
+    "version": "1.0.0",
     "content_scripts": [
       {
         "matches": ["*://www.youtube.com/*"],
         "js": ["dist/script.js"]
       }
     ],
-    "permissions": ["activeTab", "*://www.youtube.com/*"]
+    "permissions": ["activeTab", "*://www.youtube.com/*", "scripting"],
+    "host_permissions": ["*://www.youtube.com/*"]
   }
