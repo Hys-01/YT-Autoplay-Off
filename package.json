@@ -2,7 +2,7 @@
   "name": "yt-autoplay-off",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "script.ts",
 
   "scripts": {
     "build": "tsc"

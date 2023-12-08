@@ -5,7 +5,7 @@
     "content_scripts": [
       {
         "matches": ["*://www.youtube.com/*"],
-        "js": ["dist/index.js"]
+        "js": ["dist/script.js"]
       }
     ],
     "permissions": ["activeTab", "*://www.youtube.com/*"]
