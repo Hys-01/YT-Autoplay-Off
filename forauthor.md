@@ -14,3 +14,10 @@ Create .ts file (e.g., index.ts) and write  TypeScript code in it.
 Compile TypeScript Code:
 
 Run npx tsc to compile  TypeScript files into JavaScript. This will create a .js file (e.g., index.js) in the specified output directory set in tsconfig.json.
+
+
+
+
+
+
+npm install --save-dev @types/chrome  to use chrome API
