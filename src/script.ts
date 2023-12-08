@@ -26,7 +26,7 @@ function turn_Autoplay_Off() {
                 }
             }
             // repeat every 500 millisecond
-            //setInterval(autoAdvance_Off, 500);
+            setInterval(autoAdvance_Off, 500);
         
         }.toString() + ')()'));  // converting this all to string to serve as script
         
