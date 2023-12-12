@@ -35,3 +35,7 @@ chrome.runtime.getURL for manifest v3
 
 /* without a link to html file, clicking on extension brings up default chrome menulist */
 Comments are forbidden in json files
+
+
+popup window size modifying 
+    https://stackoverflow.com/questions/8983165/how-can-i-expand-the-popup-window-of-my-chrome-extension
