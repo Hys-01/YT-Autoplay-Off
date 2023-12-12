@@ -11,13 +11,15 @@ body {
     --switch-width: 60px; /* Global width for the switch */
     --switch-height: 34px; 
 }
+/* width ratio 0.433
+height ratio 0.706 */ 
 
 /* the background 'field' of the switch */ 
 .switch {
     position: relative;
     display: inline-block;
-    width: 50px;
-    height: 30px;
+    width: var(--switch-width);
+    height: var(--switch-height);
 }
 
     /* Hide default HTML checkbox */
@@ -44,8 +46,8 @@ body {
 .slider:before {
     position: absolute;  /* position is ABSOLUTELY WITHIN PARENT .SLIDER*/ 
     content: "";
-    height: 26px;
-    width: 26px;
+    height: calc(var(--switch-height)*0.706);
+    width: calc(var(--switch-width)*0.433);
     left: 4px;
     bottom: 4px;
     background-color: white;
