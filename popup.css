@@ -8,8 +8,8 @@ body {
 
 /* global vars */ 
 :root {
-    --switch-width: 60px; /* Global width for the switch */
-    --switch-height: 34px; 
+    --switch-width: 50px; /* Global width for the switch */
+    --switch-height: 28px; 
 }
 /* width ratio 0.433
 height ratio 0.706 */ 
@@ -64,9 +64,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(calc(var(--switch-height)*0.706));
+    -ms-transform: translateX(calc(var(--switch-height)*0.706));
+    transform: translateX(calc(var(--switch-height)*0.706));
 }
 
 /* Rounded sliders */
