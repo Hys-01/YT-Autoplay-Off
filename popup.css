@@ -8,18 +8,16 @@ body {
 
 /* global vars */ 
 :root {
-    --switch-width: 50px; /* Global width for the switch */
-    --switch-height: 28px; 
+    --adjust: 26px
 }
-/* width ratio 0.433
-height ratio 0.706 */ 
+
 
 /* the background 'field' of the switch */ 
 .switch {
     position: relative;
     display: inline-block;
-    width: var(--switch-width);
-    height: var(--switch-height);
+    width: calc(var(--adjust)*2.308);
+    height: calc(var(--adjust)* 1.308);
 }
 
     /* Hide default HTML checkbox */
@@ -46,8 +44,8 @@ height ratio 0.706 */
 .slider:before {
     position: absolute;  /* position is ABSOLUTELY WITHIN PARENT .SLIDER*/ 
     content: "";
-    height: calc(var(--switch-height)*0.706);
-    width: calc(var(--switch-width)*0.433);
+    height: var(--adjust);
+    width: var(--adjust);
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -64,9 +62,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(calc(var(--switch-height)*0.706));
-    -ms-transform: translateX(calc(var(--switch-height)*0.706));
-    transform: translateX(calc(var(--switch-height)*0.706));
+    -webkit-transform: translateX(var(--adjust));
+    -ms-transform: translateX(var(--adjust));
+    transform: translateX(var(--adjust));
 }
 
 /* Rounded sliders */
