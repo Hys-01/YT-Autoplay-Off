@@ -8,7 +8,7 @@ body {
 
 /* global vars */ 
 :root {
-    --adjust: 26px
+    --adjust: 50px
 }
 
 
@@ -46,8 +46,8 @@ body {
     content: "";
     height: var(--adjust);
     width: var(--adjust);
-    left: 4px;
-    bottom: 4px;
+    left: calc(var(--adjust)*0.154);
+    bottom: calc(var(--adjust)*0.154);
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -67,9 +67,9 @@ input:checked + .slider:before {
     transform: translateX(var(--adjust));
 }
 
-/* Rounded sliders */
+/* CONTROLS THE ROUNDNESS OF THE **SWITCH**!!! THE BOX CONTAINING THE SLIDER*/ 
 .slider.round {
-    border-radius: 34px;
+    border-radius: calc(var(--adjust)* 1.308);
 }
 
 .slider.round:before {
