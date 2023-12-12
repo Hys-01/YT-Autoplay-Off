@@ -21,9 +21,6 @@ canAutoAdvance_ element of youtube
 canAutoAdvance_ element and chrome.storage.local methods 
     https://github.com/Deskbot/No-Playlist-Autoplay-For-YouTube
 
-chrome.runtime.getURL for manifest v3
-    https://stackoverflow.com/questions/67439012/chrome-extension-manifest-v3-content-security-policy 
-    (additional) https://stackoverflow.com/questions/9515704/access-variables-and-functions-defined-in-page-context-from-an-extension/9517879#9517879 
 
 
 
