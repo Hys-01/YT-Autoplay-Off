@@ -17,7 +17,6 @@
             "matches": ["*://www.youtube.com/*"]
         }
     ], 
-    /* without a link to html file, clicking on extension brings up default chrome menulist */
     "action": { 
       "default_popup": "popup.html" 
     }
