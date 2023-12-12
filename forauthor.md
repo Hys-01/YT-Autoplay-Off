@@ -39,3 +39,8 @@ Comments are forbidden in json files
 
 popup window size modifying 
     https://stackoverflow.com/questions/8983165/how-can-i-expand-the-popup-window-of-my-chrome-extension
+
+
+
+JS toggle switch 
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
