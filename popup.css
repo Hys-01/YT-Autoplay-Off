@@ -3,12 +3,12 @@
 /* for main popup properties */ 
 body { 
     width: 300px; 
-    height: 200px
+    height: 200px;
 }
 
 /* global vars */ 
 :root {
-    --adjust: 50px
+    --adjust: 50px;
 }
 
 
