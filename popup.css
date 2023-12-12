@@ -6,6 +6,12 @@ body {
     height: 200px
 }
 
+/* global vars */ 
+:root {
+    --switch-width: 60px; /* Global width for the switch */
+    --switch-height: 34px; 
+}
+
 /* the background 'field' of the switch */ 
 .switch {
     position: relative;
