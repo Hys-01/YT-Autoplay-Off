@@ -69,9 +69,11 @@ input:checked + .slider:before {
 
 /* CONTROLS THE ROUNDNESS OF THE **SWITCH**!!! THE BOX CONTAINING THE SLIDER*/ 
 .slider.round {
-    border-radius: calc(var(--adjust)* 1.308);
+    /* default is calc(var(--adjust)* 1.308), same as the DIAMETER OF THE SLIDER */
+    border-radius: 20px;
 }
 
 .slider.round:before {
-    border-radius: 50%;
+    /* default at 50% for COMPLETE CIRCLE (50% on each side) */ 
+    border-radius: 30%;   
 }
