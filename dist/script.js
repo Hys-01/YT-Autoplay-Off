@@ -1,4 +1,5 @@
 "use strict";
+let userAutoplayPreference = null;
 function isInPlaylist() {
     /*
     checks if the current URL is in/part of a youtube playlist clicked on by the user.
@@ -6,7 +7,16 @@ function isInPlaylist() {
     */
     return window.location.href.includes("list=");
 }
-function turn_Autoplay_Off() {
+function changeAutoAdvance() {
+    // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
+    const manager = document.querySelector('yt-playlist-manager');
+    if (manager) {
+        manager.canAutoAdvance_ = false; // if user used the switch, set to their preference. IF they didnt, automatically set to false
+        console.log('PROPERTYTEST', manager.canAutoAdvance_);
+    }
+}
+;
+function toggle_YT_Autoplay() {
     // check if current video is in playlist
     if (isInPlaylist()) {
         // make a script, and append anonymous function to document, to asyncronously set AutoAdvance property to false, and to repeat at 0.5s intervals
@@ -14,19 +24,19 @@ function turn_Autoplay_Off() {
         script.appendChild(document.createTextNode('(' + function () {
             // use anonymouse function to convert this block to IIFE, otherwise it keeps failing
             // REMEMBER FOR FUTURE: IIFES CREATE *PRIVATE* SCOPE THAT PROTECTS THIS SCRIPT FROM INTERFERENCE FROM WEBPAGE
-            function autoAdvance_Off() {
-                // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
-                const manager = document.querySelector('yt-playlist-manager');
-                if (manager) {
-                    manager.canAutoAdvance_ = false;
-                }
-            }
             // repeat every 1/5 sec
-            setInterval(autoAdvance_Off, 200);
+            setInterval(changeAutoAdvance, 200);
         }.toString() + ')()')); // converting this all to string to serve as script
         // append custom script to bottom of page. 
         document.body.appendChild(script);
     }
 }
-console.log("MY SCRIPT!", turn_Autoplay_Off());
+///////////////////// THIS BLOCK HAS AN ISSUE, 'SYNC' IS UNDEFINED IN CHROME CONSOLE
+chrome.storage.sync.get('autoplayPreference', function (data) {
+    if (data.autoplayPreference !== undefined) {
+        userAutoplayPreference = data.autoplayPreference;
+        changeAutoAdvance();
+    }
+});
+console.log("MY SCRIPT!", toggle_YT_Autoplay());
 //# sourceMappingURL=script.js.map
