@@ -11,8 +11,7 @@ function changeAutoAdvance() {
     // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
     const manager: any = document.querySelector('yt-playlist-manager');
     if (manager) { 
-        manager.canAutoAdvance_ = false;  // if user used the switch, set to their preference. IF they didnt, automatically set to false
-        console.log('PROPERTYTEST', manager.canAutoAdvance_)
+        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : false;  // if user used the switch, set to their preference. IF they didnt, automatically set to false
     }
 };
 
@@ -36,13 +35,6 @@ function toggle_YT_Autoplay() {
         document.body.appendChild(script); 
     }   
 }
-///////////////////// THIS BLOCK HAS AN ISSUE, 'SYNC' IS UNDEFINED IN CHROME CONSOLE
-chrome.storage.sync.get('autoplayPreference', function(data) {
-    if (data.autoplayPreference !== undefined) {
-        userAutoplayPreference = data.autoplayPreference;
-        changeAutoAdvance();
-    }
-});
 
 console.log("MY SCRIPT!", toggle_YT_Autoplay());
 
