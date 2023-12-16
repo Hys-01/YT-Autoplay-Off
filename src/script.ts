@@ -7,7 +7,7 @@ function isInPlaylist(): boolean {
 }
 
 
-function turn_Autoplay_Off() { 
+function toggle_YT_Autoplay() { 
 
     // check if current video is in playlist
     if (isInPlaylist()) {
@@ -18,7 +18,7 @@ function turn_Autoplay_Off() {
             // use anonymouse function to convert this block to IIFE, otherwise it keeps failing
             // REMEMBER FOR FUTURE: IIFES CREATE *PRIVATE* SCOPE THAT PROTECTS THIS SCRIPT FROM INTERFERENCE FROM WEBPAGE
 
-            function autoAdvance_Off() {
+            function changeAutoAdvance() {
                 // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
                 const manager: any = document.querySelector('yt-playlist-manager');
                 if (manager) { 
@@ -26,7 +26,7 @@ function turn_Autoplay_Off() {
                 }
             }
             // repeat every 1/5 sec
-            setInterval(autoAdvance_Off, 200);
+            setInterval(changeAutoAdvance, 200);
         
         }.toString() + ')()'));  // converting this all to string to serve as script
         
@@ -34,6 +34,6 @@ function turn_Autoplay_Off() {
         document.body.appendChild(script); 
     }   
 }
-console.log("MY SCRIPT!", turn_Autoplay_Off());
+console.log("MY SCRIPT!", toggle_YT_Autoplay());
 
 
