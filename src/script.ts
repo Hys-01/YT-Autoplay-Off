@@ -1,3 +1,4 @@
+
 function isInPlaylist(): boolean { 
     /* 
     checks if the current URL is in/part of a youtube playlist clicked on by the user. 
@@ -6,6 +7,13 @@ function isInPlaylist(): boolean {
     return window.location.href.includes("list="); 
 }
 
+function changeAutoAdvance() {
+    // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
+    const manager: any = document.querySelector('yt-playlist-manager');
+    if (manager) { 
+        manager.canAutoAdvance_ = false;
+    }
+};
 
 function toggle_YT_Autoplay() { 
 
@@ -17,14 +25,7 @@ function toggle_YT_Autoplay() {
         script.appendChild(document.createTextNode('(' + function() { 
             // use anonymouse function to convert this block to IIFE, otherwise it keeps failing
             // REMEMBER FOR FUTURE: IIFES CREATE *PRIVATE* SCOPE THAT PROTECTS THIS SCRIPT FROM INTERFERENCE FROM WEBPAGE
-
-            function changeAutoAdvance() {
-                // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
-                const manager: any = document.querySelector('yt-playlist-manager');
-                if (manager) { 
-                    manager.canAutoAdvance_ = false;
-                }
-            }
+            
             // repeat every 1/5 sec
             setInterval(changeAutoAdvance, 200);
         
@@ -34,6 +35,8 @@ function toggle_YT_Autoplay() {
         document.body.appendChild(script); 
     }   
 }
+
+
 console.log("MY SCRIPT!", toggle_YT_Autoplay());
 
 
