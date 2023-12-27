@@ -11,8 +11,9 @@ function changeAutoAdvance() {
     // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
     const manager: any = document.querySelector('yt-playlist-manager');
     if (manager) { 
-        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : false;  // if user used the switch, set to their preference. IF they didnt, automatically set to false
+        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : true;  // if user used the switch, set to their preference. IF they didnt, automatically set to false
     }
+    console.log('CAA STATUS', manager.canAutoAdvance_)
 };
 
 function toggle_YT_Autoplay() { 
@@ -25,7 +26,7 @@ function toggle_YT_Autoplay() {
         script.appendChild(document.createTextNode('(' + function() { 
             // use anonymouse function to convert this block to IIFE, otherwise it keeps failing
             // REMEMBER FOR FUTURE: IIFES CREATE *PRIVATE* SCOPE THAT PROTECTS THIS SCRIPT FROM INTERFERENCE FROM WEBPAGE
-            
+
             // repeat every 1/5 sec
             setInterval(changeAutoAdvance, 200);
         
@@ -37,5 +38,6 @@ function toggle_YT_Autoplay() {
 }
 
 console.log("MY SCRIPT!", toggle_YT_Autoplay());
+
 
 

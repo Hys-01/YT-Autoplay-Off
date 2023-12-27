@@ -11,9 +11,9 @@ function changeAutoAdvance() {
     // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
     const manager = document.querySelector('yt-playlist-manager');
     if (manager) {
-        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : false; // if user used the switch, set to their preference. IF they didnt, automatically set to false
-        console.log('PROPERTYTEST', manager.canAutoAdvance_);
+        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : true; // if user used the switch, set to their preference. IF they didnt, automatically set to false
     }
+    console.log('CAA STATUS', manager.canAutoAdvance_);
 }
 ;
 function toggle_YT_Autoplay() {
