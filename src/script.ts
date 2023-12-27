@@ -1,4 +1,5 @@
 let userAutoplayPreference: boolean | null = null;
+
 function isInPlaylist(): boolean { 
     /* 
     checks if the current URL is in/part of a youtube playlist clicked on by the user. 
@@ -6,9 +7,10 @@ function isInPlaylist(): boolean {
     */
     return window.location.href.includes("list="); 
 }
-
+///////////////////////// REMEMBER TO COMPILE
 function changeAutoAdvance() {
     // this function gets the query responsible for playlists, and changes the canAutoAdvance_ property
+    //userpref here is null
     const manager: any = document.querySelector('yt-playlist-manager');
     if (manager) { 
         manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : true;  // if user used the switch, set to their preference. IF they didnt, automatically set to false
