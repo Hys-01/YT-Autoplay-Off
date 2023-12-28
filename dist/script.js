@@ -35,8 +35,7 @@ function toggle_YT_Autoplay() {
 }
 document.addEventListener('checkboxStateChange', function (e) {
     const checkboxState = e.detail;
-    // Now use checkboxState as needed
-    console.log("YOP", checkboxState);
+    userAutoplayPreference = checkboxState;
 });
 console.log("MY SCRIPT!", toggle_YT_Autoplay());
 //# sourceMappingURL=script.js.map
