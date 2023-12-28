@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('USER WANTS:  ' + checkbox.checked);
         });
     
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {autoplay: checkbox.checked});
-        });
+        chrome.runtime.sendMessage({autoplay: checkbox.checked});
     });
     
 });
