@@ -12,14 +12,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         console.log('Loaded preference:', data.autoplayPreference);
     });
-    
+    function sendCheckboxStateToPage(checkboxState) {
+        document.dispatchEvent(new CustomEvent('checkboxStateChange', { detail: checkboxState }));
+    }
     checkbox.addEventListener('change', function() {
-
-        chrome.storage.sync.set({'autoplayPreference': checkbox.checked}, function() {
-            console.log('USER WANTS:  ' + checkbox.checked);
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.scripting.executeScript({
+                target: { tabId: tabs[0].id },
+                function: sendCheckboxStateToPage,
+                args: [checkbox.checked]
+            });
         });
-    
-        chrome.runtime.sendMessage({autoplay: checkbox.checked});
     });
-    
+        
 });

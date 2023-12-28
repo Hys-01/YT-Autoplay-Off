@@ -13,7 +13,7 @@ function changeAutoAdvance() {
     //userpref here is null
     const manager: any = document.querySelector('yt-playlist-manager');
     if (manager) { 
-        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : true;  // if user used the switch, set to their preference. IF they didnt, automatically set to false
+        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : false;  // if user used the switch, set to their preference. IF they didnt, automatically set to false
     }
     console.log('CAA STATUS', manager.canAutoAdvance_)
 };
@@ -38,6 +38,11 @@ function toggle_YT_Autoplay() {
         document.body.appendChild(script); 
     }   
 }
+document.addEventListener('checkboxStateChange', function(e:any ) {
+    const checkboxState = e.detail;
+    // Now use checkboxState as needed
+    console.log("YOP", checkboxState)
+});
 
 console.log("MY SCRIPT!", toggle_YT_Autoplay());
 
