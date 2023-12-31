@@ -4,6 +4,8 @@
 body { 
     width: 300px; 
     height: 200px; 
+
+    
 }
 
 /* global vars */ 
@@ -13,12 +15,19 @@ body {
 
 /* the switch and associated paragraphs */ 
 .toggle {
-    border: 2px solid red;
+    /*border: 2px solid red;*/ 
+
+    
+    position: absolute; /* need to understand thi sbetter */
+    top: 50%;          /* from top of .body */
+    left: 50%;         /* from left */
     display: flex;
+    transform: translate(-50%, -50%); /* Adjust for the size of the element!!!! */
+
     justify-content: center;
-    align-items: center;
     flex-direction: column; /* Stack elements vertically */
 }
+
 /* the background 'field' of the switch */ 
 .switch {
     position: relative;
