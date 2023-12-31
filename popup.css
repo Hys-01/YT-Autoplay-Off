@@ -4,9 +4,6 @@
 body { 
     width: 300px; 
     height: 200px; 
-    display: flex;
-    justify-content: center;  /* horizontally centre */ 
-    align-items: center;   /* vertically centre */ 
 }
 
 /* global vars */ 
@@ -16,13 +13,8 @@ body {
 
 /* the switch and associated paragraphs */ 
 .toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; /* Stack elements vertically */
-    width: auto; 
+    border: 2px solid red; /* Just for testing */
 }
-
 /* the background 'field' of the switch */ 
 .switch {
     position: relative;
