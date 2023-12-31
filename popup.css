@@ -15,6 +15,14 @@ body {
 .extensionHead {
     text-align: center;
 }
+/* LEARNING - for id: #    for classes: .   */ 
+#headTitle {
+    text-decoration: overline;
+    text-decoration-color: #219190;
+    text-decoration-thickness: 5px;
+    font-weight: bold;
+
+}
 
 /* the switch and associated paragraphs */ 
 .toggle {
