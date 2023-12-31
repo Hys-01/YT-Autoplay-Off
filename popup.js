@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.dispatchEvent(new CustomEvent('checkboxStateChange', { detail: checkboxState }));
     }
     checkbox.addEventListener('change', function() {
+        // remember the state of the switch even when closing the popup
+        chrome.storage.sync.set({'autoplayPreference': checkbox.checked}, function() {
+            console.log('Autoplay preference is set to ' + checkbox.checked);
+        });
+        // ^
+        
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             chrome.scripting.executeScript({
                 target: { tabId: tabs[0].id },
