@@ -12,6 +12,9 @@ body {
 :root {
     --adjust: 50px;
 }
+.extensionHead {
+    text-align: center;
+}
 
 /* the switch and associated paragraphs */ 
 .toggle {
