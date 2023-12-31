@@ -3,7 +3,12 @@
 /* for main popup properties */ 
 body { 
     width: 300px; 
-    height: 200px;
+    display: flex;
+    justify-content: center;  /* horizontally centre */ 
+    align-items: center;   /* vertically centre */ 
+    height: 200px; /* Adjust the height as needed */
+
+
 }
 
 /* global vars */ 
@@ -11,6 +16,14 @@ body {
     --adjust: 50px;
 }
 
+/* the switch and associated paragraphs */ 
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack elements vertically */
+    width: auto; /* Adjust as needed */
+}
 
 /* the background 'field' of the switch */ 
 .switch {
@@ -18,6 +31,8 @@ body {
     display: inline-block;
     width: calc(var(--adjust)*2.308);
     height: calc(var(--adjust)* 1.308);
+    display: inline-block; /* prevent stretching */
+
 }
 
     /* Hide default HTML checkbox */
@@ -77,3 +92,6 @@ input:checked + .slider:before {
     /* default at 50% for COMPLETE CIRCLE (50% on each side) */ 
     border-radius: 30%;   
 }
+
+
+/* ------------------------ */ 
