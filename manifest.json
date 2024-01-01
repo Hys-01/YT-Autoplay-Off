@@ -24,7 +24,7 @@
     },
     "icons": {
         "16": "icons/YPAT-16px.png",
-        "48": "icons/YPAT-48px.jpg",
-        "128": "icons/YPAT-128px.jpg"
+        "48": "icons/YPAT-48px.png",
+        "128": "icons/YPAT-128px.png"
     }
 }
