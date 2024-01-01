@@ -18,7 +18,9 @@
         }
     ], 
     "action": { 
-      "default_popup": "popup.html" 
+      "default_popup": "popup.html", 
+      "default_icon": "icons/YPAT-16px.png"
+
     },
     "icons": {
         "16": "icons/YPAT-16px.png",
