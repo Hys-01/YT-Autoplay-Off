@@ -8,7 +8,7 @@
         "js": ["dist/inject.js"]
       }
     ],
-    "permissions": ["activeTab", "*://www.youtube.com/*", "scripting", "storage"],
+    "permissions": ["activeTab", "scripting", "storage"],
     "host_permissions": ["*://www.youtube.com/*"]
     ,
     "web_accessible_resources": [
