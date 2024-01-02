@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Youtube Playlist Autoplay Toggle",
+    "name": "Playlist Autoplay Toggle for Youtube™",
     "version": "1.0.0",
     "content_scripts": [
       {
