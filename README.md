@@ -1,16 +1,19 @@
 # YT-Autoplay-Off
 
-A script made in typescript that manipulates a youtube DOM element to stop loading the next video in playlists. 
+Youtube videos that are part of playlists lack a toggle to disable auto-play
+
+This extension introduces a toggle that can disable/reenable auto-play for youtube videos in playlists. 
+
 author: Hys-01 (Brian H) 
 manifest version: v3 
 tsconfig.target = ES2020
 
 TESTED IN: 
     CHROME
-    BRAVE
+    BRAVE,
     
 WORKS IN: 
-    CHROME
+    CHROME,
     BRAVE
 
 
