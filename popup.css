@@ -9,6 +9,8 @@ body {
     align-items: center; /* Center children horizontally */
     justify-content: start; /* Align children to the start of the flex container */
     padding: 10px; /* Add some padding around */
+
+    border: 2px double #219190
 }
 
 /* global vars */ 
