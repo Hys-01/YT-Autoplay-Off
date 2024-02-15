@@ -101,11 +101,7 @@ input:checked + .slider:before {
     /* default is calc(var(--adjust)* 1.308), same as the DIAMETER OF THE SLIDER */
     border-radius: 20px;
 }
-
 .slider.round:before {
     /* default at 50% for COMPLETE CIRCLE (50% on each side) */ 
     border-radius: 30%;   
 }
-
-
-/* ------------------------ */ 
