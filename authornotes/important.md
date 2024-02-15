@@ -18,3 +18,7 @@ background
   upon reloading the youtube tab it works again.
 
   fuirther testing required
+
+WARNING
+
+seems i must reload page after entering a new playlist. Or reload after changing the toggle once after entering playlist. Further testing required. 
