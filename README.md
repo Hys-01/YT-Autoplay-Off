@@ -1,13 +1,20 @@
 # YT-Autoplay-Off
 
-Youtube videos that are part of playlists lack a toggle to disable auto-play
+('Autoplay': the functionality of automatically playing the next video in the queue) 
 
-This extension introduces a toggle that can disable/reenable auto-play for youtube videos in playlists. 
+Youtube playlists lack an option to disable auto-play.
 
-author: Hys-01 (Brian H) 
-manifest version: v3 
-tsconfig.target = ES2020
+This extension introduces a toggle that can disable/re-enable auto-play for youtube videos in playlists. 
 
+This allows YT playlists to function as libraries/collections of videos. 
+
+```
+author: Hys-01 (Brian H)
+manifest version: v3  
+tsconfig.target = ES2020 
+```
+
+```
 TESTED IN: 
     CHROME
     BRAVE,
@@ -15,7 +22,7 @@ TESTED IN:
 WORKS IN: 
     CHROME,
     BRAVE
-
+```
 
 credits: 
 canAutoAdvance_ element of youtube
