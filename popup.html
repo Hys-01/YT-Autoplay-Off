@@ -4,35 +4,47 @@
 <html lang = "en"> 
 
 
-
 <head> 
+    <!-- Meta charset specifies the character encoding for the HTML document -->
     <meta charset = "UTF-8">
+    <!-- Title of the popup displayed in the popup window's title bar -->
     <title> 
         Toggle Youtube Autoplay for Playlists
     </title>
-    <!-- WRONG! REVISE ON CSS LINKING <style src = "popup.css"></style> --> 
+    <!-- Correct way to link an external CSS file for styling the popup -->
     <link rel = "stylesheet" href = "popup.css"> 
 </head>
 
 
 <body> 
+    <!-- Header section of the popup containing the title -->
     <div class = "extensionHead"> 
+        <!-- Title of the popup functionality -->
         <p id="headTitle"> YT Playlist Autoplay</p>
     </div>
 
+    <!-- Toggle switch section for enabling/disabling autoplay -->
     <div class = "toggle">
+        <!-- JavaScript file that contains the logic for the toggle functionality -->
         <script src="popup.js"></script>
+
+        <!-- Custom styled switch that acts as the toggle for autoplay -->
         <label class="switch">
-        <input type="checkbox" checked>
-        <span class="slider round"></span>
+            <!-- The actual checkbox input that will be toggled by the user -->
+            <input type="checkbox" checked>
+            <!-- Visual representation of the toggle switch -->
+            <span class="slider round"></span>
         </label>
-        
+
+        <!-- Text indicating the state of playlist autoplay (enabled or disabled) -->
+        <!-- FIXME - can likely optimise -->
         <p>
             Playlist Autoplay is: <br>
             <b>DISABLED</b>    -    <b>ENABLED</b> 
         </p>
     </div>
 
+    <!-- Notes section providing additional information to the user -->
     <div class = "notes"> 
         <p> 
 
