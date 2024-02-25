@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Playlist Autoplay Toggle for Youtube™",
-    "version": "1.0.0",
+    "name": "Youtube Playlist Autoplay Disabler",
+    "version": "1.0.1",
     "content_scripts": [
       {
         "matches": ["*://www.youtube.com/*"],
