@@ -5,4 +5,7 @@
 
     ** fixued issue with initial toggle not responding, now it does. 
     Left to fix - default when opening a new tab is always caa=false regardless of state of toggle. But a quick flick fixes it
+
+DD/MM/YYYY
+5/03/2024 - appears everything is fixed.
     
