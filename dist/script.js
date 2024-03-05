@@ -17,7 +17,7 @@ function changeAutoAdvance() {
     const manager = document.querySelector('yt-playlist-manager');
     // If a user preference is set, use it; otherwise, default to false to disable autoplay
     if (manager) {
-        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : false; // if user used the switch, set to their preference. IF they didnt, automatically set to false
+        manager.canAutoAdvance_ = userAutoplayPreference !== null ? userAutoplayPreference : true; // if user used the switch, set to their preference. IF they didnt, automatically set to false
     }
     // DEBUGGING- Log the status of autoplay functionality to the console for debugging
     console.log('CAA STATUS', manager.canAutoAdvance_);
