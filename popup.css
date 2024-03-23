@@ -10,7 +10,7 @@ body {
     justify-content: start; /* Align children to the start of the flex container */
     padding: 10px; /* Add some padding around */
 
-    background-color: #181818;
+    background-color: #faf0e6;
     border: 2px double #219190
 }
 
@@ -31,7 +31,7 @@ body {
     text-decoration-thickness: 5px;
     font-weight: bold;
     font-size: 130%;
-    color: white;
+    color: black;
 
 }
 
@@ -39,11 +39,11 @@ body {
 .toggle {
     /* Remove any width, position, or margin styles that might affect alignment */
     justify-content: center; /* For internal content alignment if it's also a flex container */
-    color: white;
+    color: black;
 }
 
 .notes {
-    color:white;
+    color:black;
 }
 /* the background 'field' of the switch */ 
 .switch {
@@ -52,7 +52,6 @@ body {
     width: calc(var(--adjust)*2.308);
     height: calc(var(--adjust)* 1.308);
     display: inline-block; /* prevent stretching */
-
 }
 
     /* Hide default HTML checkbox */
@@ -70,7 +69,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #595959;
+    background-color: 		#DCDCDC;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -83,17 +82,17 @@ body {
     width: var(--adjust);
     left: calc(var(--adjust)*0.154);
     bottom: calc(var(--adjust)*0.154);
-    background-color: #181818;
+    background-color: #FFE5B4;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked + .slider {
-    background-color: #4FB1AF;
+    background-color: 		#9FE2BF;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #4FB1AF;
+    box-shadow: 0 0 1px 		#9FE2BF;
 }
 
 input:checked + .slider:before {
