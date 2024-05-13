@@ -8,15 +8,21 @@ This extension introduces a toggle that can disable/re-enable auto-play for yout
 
 This allows YT playlists to function as libraries/collections of videos. 
 
+Number of users as of 13/05/2024: 13 :D
 ```
 author:     Hys-01
 contact     hbros2004@gmail.com 
 ```
 ```
 Extension name:         Playlist Autoplay Toggle for Youtube™
+Extension version:      1.2.1
 manifest version:       v3  
 tsconfig.target =       ES2020 
-Available for use in:   N/A
+Available for use in:   Chrome, Brave
+
+Permissions:            Youtube
+Data Collection:        NONE
+
 ```
 ```
 TESTED IN: 
