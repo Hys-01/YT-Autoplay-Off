@@ -8,7 +8,7 @@ This extension introduces a toggle that can disable/re-enable auto-play for yout
 
 This allows YT playlists to function as libraries/collections of videos. 
 
-Number of users as of 13/05/2024: 13 :D
+Number of users as of 20/05/2024: 14 :D
 ```
 author:     Hys-01
 contact     hbros2004@gmail.com 
