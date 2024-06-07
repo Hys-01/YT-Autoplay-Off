@@ -1,14 +1,14 @@
 # Playlist Autoplay Toggle for Youtube™
 
-('Autoplay': the functionality of automatically playing the next video in the queue) 
-
-Youtube playlists lack an option to disable auto-play.
+Chrome Web Store Link:
+    https://chromewebstore.google.com/detail/youtube-playlist-autoplay/mfiblneohdaglbfbgchgilldhdohkigh?hl=en-GB&authuser=0 
+    
+('Autoplay': automatically playing the next video in the queue) 
 
 This extension introduces a toggle that can disable/re-enable auto-play for youtube videos in playlists. 
+This allows YT playlists to function as libraries/collections of videos instead of an autoqueue.
 
-This allows YT playlists to function as libraries/collections of videos. 
-
-Number of users as of 31/05/2024: 17 :D
+Number of users as of 31/05/2024: 17
 ```
 author:     Hys-01
 contact     hbros2004@gmail.com 
@@ -34,7 +34,10 @@ WORKS IN:
     BRAVE
 ```
 Existing issues: 
-Setup required when opening a playlist in a NEW TAB: initial state of switch may be incorrect. Toggle once/twice to fix.
+Setup required when opening a NEW PLAYLIST. 
+Refresh page ONCE for extension to begin working.
+
+
 
 credits: 
 canAutoAdvance_ element of youtube
